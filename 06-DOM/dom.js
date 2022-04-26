@@ -2,7 +2,7 @@
 
 getElementById() -> seleciona um elemneto pelo ID
 
-querySeletor() -> seleciona um elemnto de acordo com um seletor
+querySeletor() -> seleciona um elemento de acordo com um seletor
 
 querySelectorAll -> seleciona Vários elementos de acordo com um seletor
 */ 
@@ -31,5 +31,28 @@ legenda.innerHTML = "<b>Legenda da Imagem</b>"
 //innerHTML - além de mudar só conteúdo de texto, modifica também com tags html
 
 //CSS via JS
-titulo.style.textAlign = "center" 
-titulo.style.color = "purple"
+titulo.style.textAlign = "center" ;
+titulo.style.backgroundImage = "linear-gradient(black,purple)";
+titulo.style.color = "white"
+
+
+const listaEditores = document.querySelector("#lista-editores"); // buscar um Id usa-se "#"
+
+const ultimo = listaEditores.querySelector("li:last-child");
+const primeiro = listaEditores.querySelector("li:first-child");
+const outro = listaEditores.querySelector("li:nth-child(2)");
+
+//outro.innerHTML = "<b>Deu ruim</b>"
+
+ultimo.classList.add("destaque-item");
+
+const links = document.querySelectorAll("ul li a");
+links[0].style.color = "red"
+
+for (let i = 0; i < links.length; i++){
+    links[i].setAttribute("target", "blank");
+}
+
+
+
+
