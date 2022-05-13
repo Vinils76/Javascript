@@ -20,3 +20,9 @@ formulario.addEventListener("submit", function(event) {
     };
 
 });
+
+formulario.addEventListener("click", function() {
+
+    let botao = document.getElementById("palpitar");
+
+}
